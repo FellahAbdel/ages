@@ -1,0 +1,81 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #222;
+  padding: 1rem 2rem;
+  height: 60px;
+  font-family: "Poppins", sans-serif; /* Added modern sans-serif font */
+}
+
+.navbar-logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700; /* Made more bold */
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-logo img {
+  height: 70px;
+  width: auto;
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+  margin-left: auto;
+}
+
+.navbar-links li {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500; /* Medium weight for nav items */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for the active/home link */
+.navbar-links a[routerLink="/"],
+.navbar-links a.active {
+  background-color: white;
+  color: #222;
+}
+
+.navbar-links a:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hide the actions div since it's not in the reference image */
+.navbar-actions {
+  display: none;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-links {
+    gap: 1rem;
+  }
+
+  .navbar-links a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+}

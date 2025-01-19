@@ -1,0 +1,8 @@
+<!-- Activities section -->
+<div class="activities-section">
+  <h2>{{ titre }}</h2>
+  <div *ngFor="let activite of activites" class="activity-card">
+    <h2>{{ activite.titreActivite }}</h2>
+    <p>{{ activite.description }}</p>
+  </div>
+</div>
