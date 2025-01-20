@@ -1,0 +1,21 @@
+<div class="team-section">
+  <h2>{{ titre }}</h2>
+  <div class="team-grid">
+    <div
+      *ngFor="let membre of equipe; let i = index"
+      class="team-member-card"
+      [style.--animation-order]="i"
+    >
+      <div class="member-image-container">
+        <img [src]="membre.imgUrl" [alt]="membre.prenom + ' ' + membre.nom" />
+      </div>
+      <div class="member-info">
+        <p class="member-fullname">
+          <span class="member-firstname">{{ membre.prenom }}</span>
+          <span class="member-lastname"> {{ membre.nom }}</span>
+        </p>
+        <p class="member-role">{{ membre.role }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,18 +2,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #222;
+  background: linear-gradient(135deg, #2d3436 0%, #1a1d1e 100%);
   padding: 1rem 2rem;
-  height: 60px;
-  font-family: "Poppins", sans-serif; /* Added modern sans-serif font */
+  height: 70px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-logo {
   color: white;
   font-size: 1.5rem;
-  font-weight: 700; /* Made more bold */
+  font-weight: bold;
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
 }
 
 .navbar-logo img {
@@ -30,7 +29,6 @@
   margin: 0;
   padding: 0;
   gap: 2rem;
-  margin-left: auto;
 }
 
 .navbar-links li {
@@ -39,27 +37,30 @@
 }
 
 .navbar-links a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-size: 1rem;
-  font-weight: 500; /* Medium weight for nav items */
   padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Style for the active/home link */
-.navbar-links a[routerLink="/"],
 .navbar-links a.active {
-  background-color: white;
-  color: #222;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.navbar-links a:hover:not(.active) {
-  background-color: rgba(255, 255, 255, 0.1);
+.navbar-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }
 
-/* Hide the actions div since it's not in the reference image */
+/* Hide the actions div since it's not in use */
 .navbar-actions {
   display: none;
 }
@@ -71,11 +72,25 @@
   }
 
   .navbar-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: linear-gradient(135deg, #2d3436 0%, #1a1d1e 100%);
+    padding: 1rem;
     gap: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar-links.show {
+    display: flex;
   }
 
   .navbar-links a {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
   }
 }

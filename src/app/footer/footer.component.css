@@ -1,0 +1,102 @@
+.footer-section {
+  background: linear-gradient(135deg, #2d3436 0%, #1a1d1e 100%);
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer-section h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-section p {
+  color: #f1f1f1;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social-links li {
+  transition: transform 0.3s ease;
+}
+
+.social-links li:hover {
+  transform: translateY(-3px);
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.credits {
+  font-size: 1rem;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+.credits .heart {
+  color: #e74c3c;
+  display: inline-block;
+  animation: heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 2rem 1rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .footer-section p {
+    font-size: 1rem;
+  }
+
+  .social-links {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .social-links a {
+    padding: 0.5rem 2rem;
+    min-width: 200px;
+  }
+}

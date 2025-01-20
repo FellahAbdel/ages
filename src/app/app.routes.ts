@@ -1,20 +1,19 @@
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { ActiviteComponent } from './activite/activite.component';
+import { EquipeComponent } from './equipe/equipe.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'nos-activites', component: ActiviteComponent },
+  { path: 'notre-equipe', component: EquipeComponent },
+  { path: 'contactez-nous', component: FooterComponent },
+];
 
-// import { NgModule } from '@angular/core';
-// import { RouterModule, Routes } from '@angular/router';
-// import { AgesComponent } from './ages/ages.component';
-// import { ActiviteComponent } from './activite/activite.component';
-
-// const routes: Routes = [
-//   { path: '', redirectTo: '/home', pathMatch: 'full' },
-//   { path: 'ages', component: AgesComponent },
-//   { path: 'activites', component: ActiviteComponent },
-// ];
-
-// @NgModule({
-//   imports: [RouterModule.forRoot(routes)],
-//   exports: [RouterModule],
-// })
-// export class AppRoutingModule {}
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+})
+export class AppRoutingModule {}
